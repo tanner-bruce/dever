@@ -1,0 +1,28 @@
+{
+  "name": "Dever",
+  "version": "1.0",
+  "description": "Adds a button to github or gitlab to clone a repo using the dever server",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "http://github.com/*/*",
+    "https://github.com/*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://github.com/*/*",
+        "https://github.com/*/*"
+      ],
+      "js": ["background.js"]
+    }
+  ],
+  "optional_permissions": ["*://*/"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "externally_connectable": {
+    "matches": ["*://localhost/*"]
+  }
+}
