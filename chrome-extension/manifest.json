@@ -11,10 +11,11 @@
   "content_scripts": [
     {
       "matches": [
-        "http://github.com/*/*",
-        "https://github.com/*/*"
+        "http://*/*",
+        "https://*/*"
       ],
-      "js": ["background.js"]
+      "run_at": "document_end",
+      "js": ["main.js"]
     }
   ],
   "optional_permissions": ["*://*/"],

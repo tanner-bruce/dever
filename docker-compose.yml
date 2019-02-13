@@ -1,0 +1,10 @@
+version: "3"
+services:
+  dever:
+    build: .
+    ports:
+      - 8735:8735
+    restart: always
+    volumes:
+      - ${HOME}/src:/home/src:delegated
+      - ${HOME}/.ssh:/home/.ssh
