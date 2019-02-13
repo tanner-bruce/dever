@@ -1,8 +1,9 @@
 # Dever
 
-Dever is a Chrome and Firefox extension along with a Go backend server that
-adds a button to GitLab and GitHub that when clicked will instantly clone
-that repo to ~/src/<github.com>/<user>/<repo>
+Dever is a Chrome and Firefox productivity extension along with a Go backend
+server that adds a button to GitLab and GitHub which provides a one-click clone
+to `~/src/<github.com>/<user>/<repo>`. Further, it will checkout the branch
+you are currently viewing.
 
 ## Getting Started
 

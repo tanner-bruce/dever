@@ -31,7 +31,7 @@ func runGit(dir, repo, rev string) error {
 }
 
 func clone(dir, repo string) error {
-    err := os.Mkdir(dir, 0755)
+    err := os.MkdirAll(dir, 0755)
     // if the error was something other than the directory existing, exit
     if err != nil {
         if !os.IsExist(err) {
