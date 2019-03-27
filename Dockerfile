@@ -1,7 +1,9 @@
-FROM golang:1.11
+FROM golang:1.12
 WORKDIR /src
+COPY go.mod .
+COPY go.sum .
+RUN go get ./... && env CGO_ENABLED=0 go build -o /dever ./cmd/dever
 COPY . .
-RUN go get ./... && CGO_ENABLED=0 go build -o /dever ./cmd/dever
 
 FROM alpine:edge
 COPY --from=0 /dever /dever
